@@ -1,0 +1,15 @@
+[project]
+name = "manufacturing-agent"
+version = "0.1.0"
+description = "Multi-agent CNC manufacturability assistant powered by AMD MI300X and Qwen"
+requires-python = ">=3.12"
+
+[project.dependencies]
+fastapi = "*"
+uvicorn = "*"
+langchain = "*"
+langchain-community = "*"
+supabase = "*"
+python-multipart = "*"
+requests = "*"
+cadquery = "*"

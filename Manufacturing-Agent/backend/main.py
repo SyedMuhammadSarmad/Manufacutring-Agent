@@ -28,7 +28,7 @@ async def analyze(
     file: UploadFile = File(...),
     material: str = Form(...),
     tolerance: str = Form(...),
-    threads: str = Form(...)
+    threads: str = Form(default="None")
 ):
     # Save uploaded STEP file temporarily
     with tempfile.NamedTemporaryFile(suffix=".step", delete=False) as tmp:

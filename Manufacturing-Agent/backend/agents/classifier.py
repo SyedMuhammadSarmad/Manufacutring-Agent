@@ -26,7 +26,9 @@ RULES:
 - Never use end_mill for cylindrical holes
 - End mills are only for pockets, slots, and contour milling
 - Face mills are for flat surface machining
-- Taps are for threading operations
+- Taps are for threading operations ONLY if threads value is not "None" or empty
+- If threads is "None" or empty string, do NOT include any tap in required_tools
+- If threads are specified, include a tap with the exact thread specification
 - For Steel 304 always use carbide tooling
 - For Aluminium HSS or carbide both acceptable
 - Tool diameters must match exactly what is in the features
@@ -37,7 +39,7 @@ Return ONLY a JSON object with this structure (no explanation, no markdown):
   "required_tools": [
     {{"type": "drill", "diameter_mm": <exact hole diameter from features>, "material": "carbide or HSS"}},
     {{"type": "face_mill", "min_diameter_mm": <min 40mm>, "material": "carbide or HSS"}},
-    {{"type": "tap", "thread": "<thread spec from user input>"}}
+    {{"type": "tap", "thread": "<thread spec from user input> - only include if threads are specified"}}
   ],
   "machine_requirements": {{
     "min_work_envelope_mm": {{"x": <length>, "y": <width>, "z": <height>}},

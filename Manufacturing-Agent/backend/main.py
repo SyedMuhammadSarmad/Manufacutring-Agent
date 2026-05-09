@@ -4,11 +4,11 @@ import tempfile
 import os
 import json
 
-from backend.step_parser import extract_features
-from backend.agents.classifier import classify_operations
-from backend.agents.matcher import match_tools
-from backend.agents.decision import assess_feasibility
-from backend.agents.reporter import generate_report
+from step_parser import extract_features
+from agents.classifier import classify_operations
+from agents.matcher import match_tools
+from agents.decision import assess_feasibility
+from agents.reporter import generate_report
 
 app = FastAPI(title="Manufacturing Agent API")
 

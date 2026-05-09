@@ -19,11 +19,13 @@ export function Navbar() {
           <Link href="#dashboard" className="transition-colors hover:text-foreground">Dashboard</Link>
           <Link href="#contact" className="transition-colors hover:text-foreground">Contact</Link>
         </nav>
-        <div className="flex items-center gap-4">
-          <Button variant="default" size="sm" className="hidden sm:inline-flex">
-            Upload Drawing
-          </Button>
-        </div>
+         <div className="flex items-center gap-4">
+           <Link href="/analyze">
+             <Button variant="default" size="sm" className="hidden sm:inline-flex">
+               Upload Drawing
+             </Button>
+           </Link>
+         </div>
       </div>
     </header>
   );

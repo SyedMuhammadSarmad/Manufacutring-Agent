@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Upload } from "lucide-react";
 
@@ -18,15 +19,17 @@ export function CTA() {
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
             Join top machine shops using MachinaCheck to eliminate quoting bottlenecks, reduce programming errors, and increase machine utilization.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Button size="lg" className="h-12 px-8 text-base gap-2 font-semibold">
-              <Upload className="w-5 h-5" />
-              Upload Drawing Now
-            </Button>
-            <Button size="lg" variant="outline" className="h-12 px-8 text-base bg-background/50 backdrop-blur">
-              Contact Sales
-            </Button>
-          </div>
+           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+             <Link href="/analyze">
+               <Button size="lg" className="h-12 px-8 text-base gap-2 font-semibold w-full sm:w-auto">
+                 <Upload className="w-5 h-5" />
+                 Upload Drawing Now
+               </Button>
+             </Link>
+             <Button size="lg" variant="outline" className="h-12 px-8 text-base bg-background/50 backdrop-blur">
+               Contact Sales
+             </Button>
+           </div>
           <p className="text-xs text-muted-foreground mt-6 font-mono">
             Supports PDF, DXF, STEP, and IGES up to 50MB.
           </p>

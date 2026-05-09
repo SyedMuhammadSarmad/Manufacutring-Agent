@@ -118,13 +118,43 @@
 }
 
 @layer base {
+  html {
+    @apply font-sans scroll-smooth;
+  }
+  
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
     @apply bg-background text-foreground;
   }
-  html {
-    @apply font-sans;
+}
+
+/* Smooth transitions for interactive elements */
+@layer components {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  /* Specific smooth transitions for buttons */
+  button {
+    @apply active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  /* Link hover effects */
+  a {
+    @apply hover:text-cyan-300;
+  }
+  
+  /* Form element transitions */
+  input,
+  textarea,
+  select {
+    @apply focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-400;
   }
 }

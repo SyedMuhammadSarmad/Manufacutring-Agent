@@ -54,27 +54,22 @@ export function UploadZone({
 
   if (file) {
     return (
-      <div className="border border-blue-900/50 rounded p-4 bg-blue-950/20 backdrop-blur-sm">
+      <div className="border border-blue-500/30 rounded-xl p-5 bg-gradient-to-r from-blue-950/30 to-cyan-950/30 backdrop-blur-sm transition-all duration-300">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3 flex-1">
-            <div className="p-3 rounded-lg bg-blue-900/30 border border-blue-700/30">
-              <Upload className="w-5 h-5 text-blue-400" />
+            <div className="p-3 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/40 transition-all duration-300">
+              <Upload className="w-5 h-5 text-blue-300" />
             </div>
             <div className="min-w-0 flex-1">
-              <p className="text-sm font-mono text-blue-200 truncate">
-                {file.name}
-              </p>
-              <p className="text-xs text-blue-400/70 font-mono">
-                {(file.size / 1024).toFixed(2)} KB
-              </p>
+              <p className="text-sm font-semibold text-blue-100 truncate">{file.name}</p>
+              <p className="text-xs text-blue-400/70">{(file.size / 1024).toFixed(2)} KB</p>
             </div>
           </div>
           <button
             onClick={onFileRemove}
             disabled={isDisabled}
-            className="p-2 hover:bg-red-900/30 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="p-2 hover:bg-red-500/20 rounded-lg transition-all duration-300 disabled:opacity-50 hover:scale-110 active:scale-95"
             type="button"
-            title="Remove file"
           >
             <X className="w-4 h-4 text-red-400" />
           </button>
@@ -91,10 +86,10 @@ export function UploadZone({
       onDragLeave={onDragLeave}
       onClick={handleClick}
       className={cn(
-        "relative border-2 border-dashed rounded-lg p-12 transition-all cursor-pointer",
+        "relative border-2 border-dashed rounded-2xl p-12 transition-all duration-300 cursor-pointer",
         isDragging
-          ? "border-blue-400 bg-blue-950/30"
-          : "border-gray-600 hover:border-gray-500 bg-gray-950/50 hover:bg-gray-950/70",
+          ? "border-blue-400 bg-blue-950/40 scale-105"
+          : "border-slate-600 hover:border-slate-500 bg-slate-950/40 hover:bg-slate-950/60 hover:scale-102",
         isDisabled && "opacity-50 cursor-not-allowed"
       )}
     >
@@ -105,32 +100,27 @@ export function UploadZone({
         onChange={handleInputChange}
         disabled={isDisabled}
         className="hidden"
-        aria-label="Upload STEP file"
       />
 
       <div className="flex flex-col items-center justify-center gap-4 text-center">
-        <div className="p-4 rounded-lg bg-gray-800/50 border border-gray-700/50">
-          <Upload className="w-8 h-8 text-gray-400" />
+        <div className="p-4 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30">
+          <Upload className="w-8 h-8 text-blue-400" />
         </div>
         <div>
-          <p className="text-base font-mono font-semibold text-gray-100">
-            DRAG & DROP CAD FILES
-          </p>
-          <p className="text-xs text-gray-500 font-mono mt-2 tracking-wide">
-            SUPPORTED FORMATS: STEP, STP
-          </p>
+          <p className="text-base font-semibold text-slate-100">Drag & Drop CAD Files Here</p>
+          <p className="text-sm text-slate-400 mt-1">Supported: STEP, STP (Max 50MB)</p>
         </div>
         <button
           type="button"
           disabled={isDisabled}
           className={cn(
-            "px-6 py-2 font-mono text-sm font-semibold uppercase tracking-wide rounded transition-all",
+            "px-6 py-2.5 text-sm font-semibold rounded-lg transition-all duration-300",
             isDisabled
-              ? "bg-gray-700 text-gray-400 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700 text-white active:scale-95"
+              ? "bg-slate-700 text-slate-400 cursor-not-allowed"
+              : "bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg hover:shadow-blue-500/50 active:scale-95 hover:scale-105"
           )}
         >
-          SELECT FILES MANUALLY
+          Select Files
         </button>
       </div>
     </div>

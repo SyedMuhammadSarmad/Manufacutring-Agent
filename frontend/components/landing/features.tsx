@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "Drawing Parsing",
-    description: "Instantly parse complex 2D engineering drawings and 3D CAD models using multimodal vision agents.",
+    title: "3D Parsing",
+    description: "Instantly parse complex 3D CAD models using AI agents.",
     icon: FileSearch,
   },
   {

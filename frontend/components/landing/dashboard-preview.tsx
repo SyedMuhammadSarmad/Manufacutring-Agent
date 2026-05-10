@@ -65,7 +65,7 @@ export function DashboardPreview() {
                 <CardHeader className="py-4 px-5 border-b border-cyan-500/20">
                   <CardTitle className="text-sm flex items-center font-medium text-cyan-300">
                     <FileText className="w-4 h-4 mr-2 text-cyan-400" />
-                    2D Drawing Analysis
+                    3D model Analysis
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0 h-64 relative bg-card flex items-center justify-center overflow-hidden">

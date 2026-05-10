@@ -5,7 +5,7 @@ import { Upload, BrainCircuit, Activity, Wrench, CheckCircle2, FileOutput } from
 import { motion } from "framer-motion";
 
 const steps = [
-  { name: "Upload Drawing", icon: Upload, gradient: "from-blue-500 to-blue-600" },
+  { name: "Upload 3D model", icon: Upload, gradient: "from-blue-500 to-blue-600" },
   { name: "AI Parsing", icon: BrainCircuit, gradient: "from-cyan-500 to-blue-500" },
   { name: "Operations Detection", icon: Activity, gradient: "from-cyan-400 to-cyan-500" },
   { name: "Tool Matching", icon: Wrench, gradient: "from-blue-400 to-cyan-400" },
@@ -41,7 +41,7 @@ export function Workflow() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            A continuous, deterministic workflow that transforms raw drawings into actionable manufacturing intelligence within seconds.
+            A continuous, deterministic workflow that transforms raw CAD design into actionable manufacturing intelligence within seconds.
           </motion.p>
         </div>
 

@@ -43,7 +43,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Upload engineering drawings and instantly determine machining feasibility using AI agents
+            Upload 3D model determine machining feasibility using AI agents
           </motion.p>
           
           <motion.div
